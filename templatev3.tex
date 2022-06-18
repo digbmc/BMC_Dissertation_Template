@@ -13,14 +13,7 @@
     urlcolor=blue,
     citecolor=black,
 }
-
-
-\usepackage[%
-style=phys,%
-articletitle=false,biblabel=brackets,%
-chaptertitle=false,pageranges=false%
-]
-{biblatex}
+\usepackage{biblatex}
 %\addbibresource{your_bib_file.bib}
 \addbibresource{template_file.bib}
 % Document Format
@@ -47,15 +40,6 @@ chaptertitle=false,pageranges=false%
 %%%%%% Changing the name of the contents page
 \renewcommand*\contentsname{Table of Contents}
 %%%%%% Bibliography spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newlength{\bibitemsep}\setlength{\bibitemsep}{.2\baselineskip plus .05\baselineskip %minus .05\baselineskip}
-%\newlength{\bibparskip}\setlength{\bibparskip}{0pt}
-%\let\oldthebibliography\thebibliography
-%\renewcommand\thebibliography[1]{%
-%  \oldthebibliography{#1}%
-%  \setlength{\parskip}{\bibitemsep}%
-%  \setlength{\itemsep}{\bibparskip}%
-%}
 
 \setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}
 %%%%%% Bibliography spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
