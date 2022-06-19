@@ -1,77 +1,7 @@
 %% Created by Carlos Cartagena-Sanchez in writing his dissertation.
 \documentclass[12pt]{report}
 %
-\usepackage[utf8]{inputenc}
-\usepackage{import}
-\usepackage{titlesec}
-\usepackage{setspace}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=black,      
-    urlcolor=blue,
-    citecolor=black,
-}
-
-
-\usepackage[%
-style=phys,%
-articletitle=false,biblabel=brackets,%
-chaptertitle=false,pageranges=false%
-]
-{biblatex}
-%\addbibresource{your_bib_file.bib}
-\addbibresource{thesis.bib}
-% Document Format
-%%%%%% Left-justified
-\usepackage[document]{ragged2e}
-\setlength{\RaggedRightParindent}{0.5in} % Adding indentation
-%\usepackage[none]{hyphenat} % Avoids hyphenation
-%%%%%% Headings
-\titleformat{\chapter}[block]
-{\centering\normalfont\normalsize\bfseries}{\chaptertitlename\  \thechapter:}{1em}{}
-
-\titleformat{\section}
-  {\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
-
-\titleformat{\subsection}
-  {\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
-
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
-%%%%%% Margins %%%%%%
-\usepackage[a4paper, left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
-%%%%%% Line Spacing
-\linespread{2.0}
-%%%%%% Changing the name of the contents page
-\renewcommand*\contentsname{Table of Contents}
-%%%%%% Bibliography spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\newlength{\bibitemsep}\setlength{\bibitemsep}{.2\baselineskip plus .05\baselineskip %minus .05\baselineskip}
-%\newlength{\bibparskip}\setlength{\bibparskip}{0pt}
-%\let\oldthebibliography\thebibliography
-%\renewcommand\thebibliography[1]{%
-%  \oldthebibliography{#1}%
-%  \setlength{\parskip}{\bibitemsep}%
-%  \setlength{\itemsep}{\bibparskip}%
-%}
-
-\setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}
-%%%%%% Bibliography spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%% Command for Appendix List %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand\listappendixname{List of Appendices}
-\newcommand\appcaption[1]{%
-  \addcontentsline{app}{chapter}{#1}}
-\makeatletter
-\newcommand\listofappendices{%
-  \chapter*{\listappendixname}\@starttoc{app}}
-\makeatother
-%%%%%% Command for Appendix List %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\usepackage[bibconfig]{bmctemplate}
 
 \begin{document}
 %Adding indentation
@@ -81,42 +11,18 @@ chaptertitle=false,pageranges=false%
 %title page
 \import{./}{titlepage.tex} % BMPL Info
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagenumbering{gobble}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% Copy Right Page (Optional)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{}
-\vspace*{\fill}
-\begin{center}
-\begin{singlespace}
-This page is optional\\
-
-optional ORCID iD:  9999-9999-9999-9999\\
-optionalCreative Commons License \\
-optional© Author's Name YYYY\\
-\end{singlespace}
-\end{center}
-\vspace*{\fill}
+\import{./}{copyrightpage.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-\indent \indent Your abstract will be made available on the Bryn Mawr College Repository and
-through ProQuest Dissertations and should provide a succinct account of the substance
-and contribution of your dissertation. Use of specific keywords will help in discovery of
-your work. Your abstract cannot exceed 350 words, and cannot include charts, graphs, or
-illustrations; it should be text with only basic formatting (e.g., \textit{italics}).
+\import{./}{abstractpage.tex}
 \pagenumbering{roman}
 \setcounter{page}{2}
-\chapter*{Dedication}
-\begin{center}
-    This page is optional
-\end{center}
-\addcontentsline{toc}{chapter}{Dedication}
-\chapter*{Acknowledgements}
-\begin{center}
-    This page is optional
-\end{center}
-\addcontentsline{toc}{chapter}{Acknowledgements}
+\import{./}{dedicationpage.tex}
+\import{./}{acknowledgementpage.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
 \newpage
 \listoffigures
@@ -125,6 +31,7 @@ illustrations; it should be text with only basic formatting (e.g., \textit{itali
 \newpage
 \listofappendices
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
 \chapter{Introduction: Titles and Page Numbers}
 \indent\indent This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
