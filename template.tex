@@ -22,7 +22,7 @@ chaptertitle=false,pageranges=false%
 ]
 {biblatex}
 %\addbibresource{your_bib_file.bib}
-\addbibresource{template_file.bib}
+\addbibresource{thesis.bib}
 % Document Format
 %%%%%% Left-justified
 \usepackage[document]{ragged2e}
@@ -158,8 +158,8 @@ Page numbers are set in lower-case Roman numerals for all pages until the start 
 \indent\indent Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
 
 
-\addcontentsline{toc}{chapter}{Bibliography}
+%\addcontentsline{toc}{chapter}{Bibliography}
 \singlespacing
 %\printbibliography % Uncomment when you added your bib file
-\printbibliography
+\printbibliography[heading=bibintoc, title={Bibliography}]
 \end{document}
