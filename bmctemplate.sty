@@ -27,6 +27,11 @@
 
 %%%%%% Package Options
 \DeclareOption{double}{\linespread{2.0}}
+\DeclareOption{bibconfig}{\RequirePackage[style=phys,%
+articletitle=false,biblabel=brackets,%
+chaptertitle=false,pageranges=false%
+]{biblatex}%
+\setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}}
 \DeclareOption*{\PackageWarning{bmctemplate}{Unknown ‘\CurrentOption’}}
 \ProcessOptions\relax
 %%%%%% Package Options
@@ -49,8 +54,6 @@
 \renewcommand*\contentsname{Table of Contents}
 %%%%%% Bibliography spacing %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}
 
 
 %%%%%% Command for Appendix List %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
