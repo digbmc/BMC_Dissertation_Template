@@ -49,11 +49,13 @@
 %%%%%% Package Options
 %%%%%% Conditional Statements
 \if@loadbibconfig
-  \RequirePackage[style=phys,%
-articletitle=false,biblabel=brackets,%
-chaptertitle=false,pageranges=false%
-]{biblatex}%
+  %\RequirePackage[style=phys,%
+%articletitle=false,biblabel=brackets,%
+%chaptertitle=false,pageranges=false%
+%]{biblatex}%
+\RequirePackage{biblatex}
 \setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}%
+\setlength{\bibhang}{5\parskip}
 \addbibresource{template_file.bib}  % defining the thesis bib
 \fi
 %%%%%% Conditional Statements
