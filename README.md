@@ -13,3 +13,4 @@ The template:
 
 The package:
 [bmctemplate.sty](https://github.com/cacsphysics/BMC_Dissertation_Template/blob/main/bmctemplate.sty)
+The package is underconstruction.
