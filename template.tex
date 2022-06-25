@@ -1,9 +1,13 @@
 %% Created by Carlos Cartagena-Sanchez in writing his dissertation.
-\documentclass[12pt]{report}
+\documentclass[12pt, draft]{report}
 %
-\usepackage[bibconfig]{bmctemplate}
-
+\usepackage[double]{bmctemplate}
+\usepackage[style=authoryear,%
+sorting=ynt,%
+natbib=true]{biblatex}
+\addbibresource{template_file.bib}
 \begin{document}
+
 %Adding indentation
 %\setlength\parindent{24pt}
 %\doublespace
@@ -26,15 +30,18 @@
 \tableofcontents
 \newpage
 \listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
 \newpage
 \listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
 \newpage
 \listofappendices
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
-\chapter{Introduction: Titles and Page Numbers}
-\indent\indent This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
+\chapter{Titles and Page Numbers}
+Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The 
+This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
 \begin{verbatim}
                                 \indent.
 \end{verbatim}
@@ -51,18 +58,15 @@ A new page is started after most sections of your dissertation (Dedication, List
                                 \newpage.
 \end{verbatim}  
 Page numbers are set in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. This template is set up to add numbers automatically. No other text except the page number should appear in the header or footer.
-
-
-\section{Format}
-\indent\indent This is placeholder text that is formatted correctly, but should be replaced by the contents of your dissertation.
-\section{Bibliographies}
-\indent\indent Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\cite{schaffner_temporal_2014, alma991013205769704921} The bibliography is formatted within the *.tex file on lines 41-53.
 \newpage
-\chapter{Chapter 2}
-\chapter{Chapter 3}
+\chapter{Formatting}
+\section{Format}
+This is placeholder text that is formatted correctly, but should be replaced by the contents of your dissertation.
+\section{Bibliographies}
+Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\cite{schaffner_temporal_2014, alma991013205769704921} The bibliography is formatted within the *.tex file on lines 41-53.
 \appendix
 \chapter{Appendix one}\appcaption{Appendix one}
-\indent\indent Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
+Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
 
 
 %\addcontentsline{toc}{chapter}{Bibliography}
