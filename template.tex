@@ -1,16 +1,11 @@
 %% Created by Carlos Cartagena-Sanchez in writing his dissertation.
 \documentclass[12pt]{report}
 %
-\usepackage[double]{bmctemplate}
-\usepackage[style=authoryear,%
-sorting=ynt,%
-natbib=true]{biblatex}
+\usepackage[double,bibconfig]{bmctemplate}
 \addbibresource{template_file.bib}
 \begin{document}
 
-%Adding indentation
-%\setlength\parindent{24pt}
-%\doublespace
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %title page
 \import{./}{titlepage.tex} % BMPL Info
@@ -42,37 +37,18 @@ natbib=true]{biblatex}
 \chapter{Titles and Page Numbers}
 Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The \path{bmctemplate.sty} file automatically includes the table of contents. The template uses the \path{titletoc} package and if you want to edit the style of the table of contents I recommend reading through the documentation \href{https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf}{titlesec.pdf}. 
 
-Editing the table of contents can be I r
-This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
-\begin{verbatim}
-                                \indent.
-\end{verbatim}
-To start a new paragraph you must have one empty line between the old paragraph and the new paragraph within your *.tex file or the 
-\begin{verbatim}
-                            \par command.
-\end{verbatim}
-\par
-Chapter titles (and all other section headings like the Acknowledgments and Abstract) should be designated as Heading 1 in the Styles menu. 
-Using heading styles will allow you to automatically create your table of contents in Word. If you want to use Heading 2 and Heading 3 styles for subsections, you will have to modify the `titleformat' function in the preamble.
-
-A new page is started after most sections of your dissertation (Dedication, List of Tables, Chapters, Appendices, etc.). When you create a new chapter the document will automatically add a newpage, however for sections this must be done manually. The command you use to impose the new page is
-\begin{verbatim}
-                                \newpage.
-\end{verbatim}  
-Page numbers are set in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. This template is set up to add numbers automatically. No other text except the page number should appear in the header or footer.
+Page numbers should be in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be on the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. No other text except the page number should appear in the header or footer. The page numbers can be set with the command \path{pagenumbering{roman}} for Roman numerals and \path{pagenumbering{arabic}} for Arabic numerals.
 \newpage
 \chapter{Formatting}
 \section{Format}
-This is placeholder text that is formatted correctly, but should be replaced by the contents of your dissertation.
+Margins should be $1in$ on all sides. The left-hand margin can be $1.5in$ for binding, as in this guide. Headings of the main section of the dissertation: Abstract, Acknowledgements, Table of Contents, List of Figures, and each chapter; should begin $2in$ from the top of the page.
+
+The body text should be double-spaced, with the exception of long quotations (which should be offset and single-spaced), list of figures or appendices, text of footnotes or endnotes, and entries in your bibliography.
 \section{Bibliographies}
-Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\cite{schaffner_temporal_2014, alma991013205769704921} The bibliography is formatted within the *.tex file on lines 41-53.
+Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953} \href{https://ctan.org/pkg/biblatex-chicago?lang=en}{Chicago-style}
 \appendix
 \chapter{Appendix Name}
-Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
-
-
-%\addcontentsline{toc}{chapter}{Bibliography}
+Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc.
 \singlespacing
-%\printbibliography % Uncomment when you added your bib file
 \printbibliography[heading=bibintoc, title={Bibliography}]
 \end{document}

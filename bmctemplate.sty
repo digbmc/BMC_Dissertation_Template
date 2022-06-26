@@ -44,21 +44,32 @@
 %%%%%% Package Options
 \DeclareOption{double}{\linespread{2.0}}
 
-\newif\if@loadbibconfig %\@loadbibconfigfalse
+\newif\if@loadbibconfig %\@loadbibconfigfalse  % creating the boolean variable for the if-statement
 \DeclareOption{bibconfig}{\@loadbibconfigtrue}
 \DeclareOption*{\PackageWarning{bmctemplate}{Unknown ‘\CurrentOption’}}
 \ProcessOptions\relax
 %%%%%% Package Options
-%%%%%% Conditional Statements
+%%%%%% Conditional Statements %%%%%%%%
 \if@loadbibconfig
- \RequirePackage[style=phys,%
-articletitle=false,biblabel=brackets,%
-chaptertitle=false,pageranges=false,%
-natbib=true]{biblatex}%
-\RequirePackage{biblatex}
-\setlength{\bibitemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}%
-\setlength{\bibhang}{5\parskip}
-\addbibresource{template_file.bib}  % defining the thesis bib
+    \RequirePackage[
+        backend=biber,
+        style=phys,
+        biblabel=brackets,
+        articletitle=true
+    ]{biblatex}
+    \defbibenvironment{bibliography}
+        {\list{\printtext[labelnumberwidth]{%
+            \printfield{labelprefix}%
+            \printfield{labelnumber}}}
+        {\setlength{\leftmargin}{\bibhang}%
+            \setlength{\itemindent}{-\leftmargin}%
+            \setlength{\itemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}%
+            \setlength{\parsep}{\bibparsep}}
+        }
+        {\endlist}
+    {\item}
+
+    \addbibresource{template_file.bib}  % defining the thesis bib
 \fi
 %%%%%% Conditional Statements
 
