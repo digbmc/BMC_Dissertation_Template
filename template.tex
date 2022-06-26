@@ -1,5 +1,5 @@
 %% Created by Carlos Cartagena-Sanchez in writing his dissertation.
-\documentclass[12pt, draft]{report}
+\documentclass[12pt]{report}
 %
 \usepackage[double]{bmctemplate}
 \usepackage[style=authoryear,%
@@ -40,7 +40,9 @@ natbib=true]{biblatex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
 \chapter{Titles and Page Numbers}
-Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The 
+Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The \path{bmctemplate.sty} file automatically includes the table of contents. The template uses the \path{titletoc} package and if you want to edit the style of the table of contents I recommend reading through the documentation \href{https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf}{titlesec.pdf}. 
+
+Editing the table of contents can be I r
 This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
 \begin{verbatim}
                                 \indent.
@@ -65,7 +67,7 @@ This is placeholder text that is formatted correctly, but should be replaced by 
 \section{Bibliographies}
 Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\cite{schaffner_temporal_2014, alma991013205769704921} The bibliography is formatted within the *.tex file on lines 41-53.
 \appendix
-\chapter{Appendix one}\appcaption{Appendix one}
+\chapter{Appendix Name}
 Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
 
 
