@@ -34,21 +34,38 @@
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{arabic}
-\chapter{Titles and Page Numbers}
+\chapter{Pages}
+\section{Title Page}
+The title page must contain the date of degree and list the committee members. The date of degree is the year you are awarded the Ph.D., not the year you submit your dissertation. The Committee list starts with your dissertation adivsor(s), with the indication of Advisor or Co-Advisor and your outside chair should only be identified by name. Only list an institution for committee members who are not affiliated with Bryn Mawr College.
+\section{Copyright Page}
+You automatically hold copyright in your dissertation whether or not you inlcude the copyright notice (but there is not reason not to include it). No formal registration of your copyright is required. You may choose to register your copyright with the US Copyright office for a fee. Proquest will ask you if you would like them to file for you for $\$75$, or you can file yourself through the \href{https://www.copyright.gov/registration/}{Library of Congress} for $\$45$. Registration allows you to sue for statutory damages and attorney's fees following intentional infringement of your copyright.
+
+Including a \href{https://creativecommons.org/licenses/}{Create Commons License}, you let readers know the terms under which they can use and adapt your dissertation. (Note that whether or not you include a CC license, others are entitled to limited use of your dissertation under the fair use doctrine; see below for links on fair use.)
+
+\href{https://orcid.org/}{ORCID iDs} are free presistent digital identifiers that distinguish you from other researchers (for example, if yo uhave the same name as another scholar).
+\newpage
+\chapter{Formatting}
+\section{Titles and Page Numbers}
 Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The \path{bmctemplate.sty} file automatically includes the table of contents. The template uses the \path{titletoc} package and if you want to edit the style of the table of contents I recommend reading through the documentation \href{https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf}{titlesec.pdf}. 
 
 Page numbers should be in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be on the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. No other text except the page number should appear in the header or footer. The page numbers can be set with the command \path{pagenumbering{roman}} for Roman numerals and \path{pagenumbering{arabic}} for Arabic numerals.
-\newpage
-\chapter{Formatting}
 \section{Format}
 Margins should be $1in$ on all sides. The left-hand margin can be $1.5in$ for binding, as in this guide. Headings of the main section of the dissertation: Abstract, Acknowledgements, Table of Contents, List of Figures, and each chapter; should begin $2in$ from the top of the page.
 
 The body text should be double-spaced, with the exception of long quotations (which should be offset and single-spaced), list of figures or appendices, text of footnotes or endnotes, and entries in your bibliography.
 \section{Bibliographies}
-Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953} \href{https://ctan.org/pkg/biblatex-chicago?lang=en}{Chicago-style}
+Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953}
+
+\chapter{Dissertation Submission}
+
+\section{Open Access Publication}
+Your dissertation will be made openly available through the \href{https://repository.brynmawr.edu/}{Bryn Mawr College Repository}. You will also submit to Proquest, where your dissertation will be made available through the Proquest Digital Dissertation database. Both the Bryn Mawr version and the Proquest version must be identical, and must include all text, images, tables, and appendices. A staff member in the library will check for required parts and formatting, and will approve publication to Proquest once you have uploaded your dissertation to Proquest.
+\section{Embargos}
+For both the Bryn Mawr repository and Proqeust, you can publish your dissertation immediately, or withhold dissemination for one or two years. If you do not place an embargo on the dissertation, it will be made opely available immediately and wiull be published to thge Proquest Digital Dissertations database immediately. If you do place an embargo period and will automatically be made available openly at the end of the embargo. 
 \appendix
 \chapter{Appendix Name}
 Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc.
+
 \singlespacing
 \printbibliography[heading=bibintoc, title={Bibliography}]
 \end{document}
