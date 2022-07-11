@@ -34,5 +34,5 @@ The **bmc_template** package contains two options:
 
 The BMC dissertations are required to be double spaced. The **double** option changes the linespacing to double space. Keeping the double space as an option allows the content creator to toggle between single spacing and double spacing to their liking during the editing stages of their dissertation.
 
-The bibliography is required to have each bibitem with a hanging indent and single spaced. Spacing between bibitems must be double spaced. The **bibconfig** option incorporates a basic implementation of the format. However, to incorporate your preferred citation method and the bibliographic requirements you will have to code the bibliography latex environment yourself. The titlesec package documentation includes information on how to change the bibliography environment.
+The bibliography is required to have each bibitem with a hanging indent and single spaced. Spacing between bibitems must be double spaced. The **bibconfig** option incorporates a basic implementation of the format. However, to incorporate your preferred citation method and the bibliographic requirements you will have to code the bibliography latex environment yourself. The titlepage package documentation includes information on how to change the bibliography environment.
 
