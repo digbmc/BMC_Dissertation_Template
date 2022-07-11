@@ -28,6 +28,8 @@ The package uses the following packages:
 - xcolor, 
 - indentfirst
 ---
+The template sets many of the LaTeX environments to match the BMC dissertation requirements: chapter/section headings, table of contents, appendicies, titlepage, abstract, acknowledgement, etc.
+
 The **bmc_template** package contains two options:
 - double
 - bibconfig
