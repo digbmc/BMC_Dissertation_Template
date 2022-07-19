@@ -27,6 +27,8 @@ The package uses the following packages:
 - [a4paper, left=1.5in, right=1in, top=1in, bottom=1in] geometry,
 - xcolor, 
 - indentfirst
+- caption
+- subcaption
 ---
 The template sets many of the LaTeX environments to match the BMC dissertation requirements: chapter/section headings, table of contents, appendicies, titlepage, abstract, acknowledgement, etc.
 
