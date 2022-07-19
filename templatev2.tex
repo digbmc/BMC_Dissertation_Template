@@ -4,16 +4,10 @@
 
 % Including my bibliography preference
 %\addbibresource{your_bib_file.bib}
-%\usepackage[style=phys,%
-%articletitle=false,biblabel=brackets,%
-%chaptertitle=false,pageranges=false%
-%]{biblatex}
-%\addbibresource{template_file.bib}
+
 
 \begin{document}
-%Adding indentation
-%\setlength\parindent{24pt}
-%\doublespace
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %title page
 \import{./}{titlepage.tex} % BMPL Info
@@ -37,23 +31,10 @@ optional© Author's Name YYYY\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-\indent \indent Your abstract will be made available on the Bryn Mawr College Repository and
-through ProQuest Dissertations and should provide a succinct account of the substance
-and contribution of your dissertation. Use of specific keywords will help in discovery of
-your work. Your abstract cannot exceed 350 words, and cannot include charts, graphs, or
-illustrations; it should be text with only basic formatting (e.g., \textit{italics}).
+This document is designed to accompany the template. The template is designed to work with \href{https://www.overleaf.com/for/authors}{Overleaf's} 2021 Live LateX system. The features of the template and the \LaTeX~ packages it calls are documented herein.
 \pagenumbering{roman}
 \setcounter{page}{2}
 \chapter*{Dedication}
-\begin{center}
-    This page is optional
-\end{center}
-\addcontentsline{toc}{chapter}{Dedication}
-\chapter*{Acknowledgements}
-\begin{center}
-    This page is optional
-\end{center}
-\addcontentsline{toc}{chapter}{Acknowledgements}
 \tableofcontents
 \newpage
 \listoffigures
@@ -63,39 +44,11 @@ illustrations; it should be text with only basic formatting (e.g., \textit{itali
 \listofappendices
 \newpage
 \pagenumbering{arabic}
-\chapter{Introduction: Titles and Page Numbers}
-\indent\indent This is text that is formatted correctly, but should be replaced by the text of your dissertation. To indent the first paragraph after every chapter and section heading you must add two calls of
-\begin{verbatim}
-                                \indent.
-\end{verbatim}
-To start a new paragraph you must have one empty line between the old paragraph and the new paragraph within your *.tex file or the 
-\begin{verbatim}
-                            \par command.
-\end{verbatim}
-\par
-Chapter titles (and all other section headings like the Acknowledgments and Abstract) should be designated as Heading 1 in the Styles menu. 
-Using heading styles will allow you to automatically create your table of contents in Word. If you want to use Heading 2 and Heading 3 styles for subsections, you will have to modify the `titleformat' function in the preamble.
+\chapter{Motivation}
+Bryn Mawr College established a standard dissertation style. However, a \LaTeX~ template for the dissertation style was, until now, nonexistent. The need to accommodate the various fields of study and their methods for document creation a \LaTeX~ template was needed.
 
-A new page is started after most sections of your dissertation (Dedication, List of Tables, Chapters, Appendices, etc.). When you create a new chapter the document will automatically add a newpage, however for sections this must be done manually. The command you use to impose the new page is
-\begin{verbatim}
-                                \newpage.
-\end{verbatim}  
-Page numbers are set in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. This template is set up to add numbers automatically. No other text except the page number should appear in the header or footer.
+This manuscript contains information relevant for the current version of the \LaTeX~ template created by Carlos A. Cartagena-Sanchez. Since, \LaTeX~ is a powerful markup language which uses \href{https://en.wikipedia.org/wiki/LaTeX}{macro language} to develop custom manuscripts. The intent is to understand how to modify the template to fit the author's needs. 
 
-
-\section{Format}
-\indent\indent This is placeholder text that is formatted correctly, but should be replaced by the contents of your dissertation.
-\section{Bibliographies}
-\indent\indent Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\cite{schaffner_temporal_2014, alma991013205769704921} The bibliography is formatted within the *.tex file on lines 41-53.
-\newpage
-\chapter{Chapter 2}
-\chapter{Chapter 3}
-\appendix
-\chapter{Appendix one}\appcaption{Appendix one}
-\indent\indent Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc
-
-
-%\addcontentsline{toc}{chapter}{Bibliography}
 \singlespacing
 %\printbibliography % Uncomment when you added your bib file
 \printbibliography[heading=bibintoc, title={Bibliography}]
