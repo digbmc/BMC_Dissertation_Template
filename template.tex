@@ -38,6 +38,8 @@
 \chapter{The Bryn Mawr College Dissertation \LaTeX~Template}
 The Bryn Mawr College (BMC) dissertation \LaTeX~template is hosted on overleaf and \href{https://github.com/cacsphysics/BMC_Dissertation_Template}{github}. The template is designed to work with \href{https://www.overleaf.com/for/authors}{Overleaf's} 2021 Live LateX system. The features of the template and the \LaTeX~ packages it calls are documented in the \href{https://github.com/cacsphysics/BMC_Dissertation_Template}{github} repository.
 
+The template includes two options: double and bibconfig. The double option is needed to meet the BMC standards described in section \ref{sec:format}. The bibconfig is a rudimentary bibliographic reformatting that conforms with the BMC standards described in section \ref{sec:biblio}. Implementing the bibconfig will force you to edit the bib-items. If you want to configure your own bibliographic environment using the \verb|biblatex| macros I gathered documentation within a different \href{https://github.com/cacsphysics/BMC_Template_Info_Files}{github repository}.
+
 \chapter{Pages}
 \section{Title Page}
 The title page must contain the date of degree and list the committee members. The date of degree is the year you are awarded the Ph.D., not the year you submit your dissertation. The Committee list starts with your dissertation advisor(s), with the indication of Advisor or Co-Advisor and your outside chair should only be identified by name. Only list an institution for committee members who are not affiliated with BMC.
@@ -54,11 +56,11 @@ Including a \href{https://creativecommons.org/licenses/}{Create Commons License}
 Chapter titles should appear in the Table of Contents; section headings can appear in the Table of Contents. The \path{bmctemplate.sty} file automatically includes the table of contents. The template uses the \path{titletoc} package and if you want to edit the style of the table of contents I recommend reading through the documentation \href{https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf}{titlesec.pdf}. 
 
 Page numbers should be in lower-case Roman numerals for all pages until the start of Chapter 1, with the unnumbered copyright page as page i (the first page that shows the page number will be on the Abstract). Arabic numerals begin with Chapter 1 and continue through the rest of the dissertation. No other text except the page number should appear in the header or footer. The page numbers can be set with the command \path{pagenumbering{roman}} for Roman numerals and \path{pagenumbering{arabic}} for Arabic numerals.
-\section{Format}
+\section{Format}\label{sec:format}
 Margins should be $1in$ on all sides. The left-hand margin can be $1.5in$ for binding, as in this guide. Headings of the main section of the dissertation: Abstract, Acknowledgements, Table of Contents, List of Figures, and each chapter; should begin $2in$ from the top of the page.
 
 The body text should be double-spaced, with the exception of long quotations (which should be offset and single-spaced), list of figures or appendices, text of footnotes or endnotes, and entries in your bibliography.
-\section{Bibliographies}
+\section{Bibliographies}\label{sec:biblio}
 Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953}
 
 The \verb|biblatex| package is called within the \verb|bmctemplate.sty| file. This means you can use the biblatex commands to setup your bibliography. 
