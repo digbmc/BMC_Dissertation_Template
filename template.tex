@@ -56,6 +56,9 @@ The body text should be double-spaced, with the exception of long quotations (wh
 \section{Bibliographies}
 Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953}
 
+The \verb|biblatex| package is called within the \verb|bmctemplate.sty| file. This means you can use the biblatex commands to setup your bibliography. 
+To add a bibliographic resource file use the \verb|\addbibresource{biblio_file.bib}| command. And to print the bibliography and include it within the table of contents use \verb|\printbibliography[heading=bibintoc, title={Bibliography}]|.
+
 \chapter{Dissertation Submission}
 
 \section{Open Access Publication}
