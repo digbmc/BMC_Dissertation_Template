@@ -30,7 +30,7 @@ The package uses the following packages:
 - caption
 - subcaption
 
-I created another repository containing pckage documentation for the [packages](https://github.com/cacsphysics/BMC_Template_Info_Files).
+See also the [BMC Dissertation Template Info repository](https://github.com/digbmc/BMC_Template_Info_Files) for documentation about the packages used here.
 
 ---
 The template sets many of the LaTeX environments to match the BMC dissertation requirements: chapter/section headings, table of contents, appendicies, titlepage, abstract, acknowledgement, etc.
