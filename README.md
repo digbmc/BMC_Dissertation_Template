@@ -19,8 +19,8 @@ The package uses the following packages:
 - url, 
 - [utf8] inputenc, 
 - import, 
-- titlesec, 
-- titletoc, 
+- [titlesec](https://ctan.org/pkg/titlesec?lang=en), 
+- [titletoc](https://ctan.org/pkg/titlesec?lang=en), 
 - setspace, 
 - xparse, 
 - [document] ragged3e, 
@@ -29,6 +29,7 @@ The package uses the following packages:
 - indentfirst
 - caption
 - subcaption
+- [biblatex](https://ctan.org/pkg/biblatex)
 
 ---
 The template sets many of the LaTeX environments to match the BMC dissertation requirements: chapter/section headings, table of contents, appendicies, titlepage, abstract, acknowledgement, etc.
@@ -43,7 +44,7 @@ The bibliography is required to have each bibitem with a hanging indent and sing
 
 
 # Bibliography Setup
-The bibliography setup currently used within the template was constructed with various stackexchange information. The solutions within [the link](https://tex.stackexchange.com/questions/400644/no-hanging-indent-with-biblatex-in-bibliography) are very helpful. In addition, the [biblatex package](https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/biblatex.pdf) was curcial in understanding the **\defbibenvironment{}** biblatex command.
+The bibliography setup currently used within the template was constructed with various stackexchange information. The solutions within [the link](https://tex.stackexchange.com/questions/400644/no-hanging-indent-with-biblatex-in-bibliography) are very helpful. In addition, the [biblatex package](https://ctan.org/pkg/biblatex) was curcial in understanding the **\defbibenvironment{}** biblatex command.
 
 The Bibliography code block:
 ```
@@ -69,7 +70,7 @@ The Bibliography code block:
 ```
 
 # Table of Contents Setup
-The table of contents, and chapter, section and subsection headers, are formatted using the [titlesec packages](https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf), there are three. 
+The table of contents (titletoc), and chapter, section and subsection headers, are formatted using the [titlesec packages](https://ctan.org/pkg/titlesec?lang=en), there are three. 
 > I wish the author of the titlesec manual used the hyperref package.
 
 
