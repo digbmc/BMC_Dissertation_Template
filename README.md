@@ -41,3 +41,35 @@ The BMC dissertations are required to be double spaced. The **double** option ch
 
 The bibliography is required to have each bibitem with a hanging indent and single spaced. Spacing between bibitems must be double spaced. The **bibconfig** option incorporates a basic implementation of the format. However, to incorporate your preferred citation method and the bibliographic requirements you will have to code the bibliography latex environment yourself. The titlepage package documentation includes information on how to change the bibliography environment.
 
+
+# Bibliography Setup
+The bibliography setup currently used within the template was constructed with various stackexchange information. The solutions within [the link](https://tex.stackexchange.com/questions/400644/no-hanging-indent-with-biblatex-in-bibliography) are very helpful. In addition, the [biblatex package](https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/biblatex.pdf) was curcial in understanding the **\defbibenvironment{}** biblatex command.
+
+The Bibliography code block:
+```
+{
+\RequirePackage[
+        backend=biber,
+        style=phys,
+        biblabel=brackets,
+        articletitle=true
+    ]{biblatex}
+    \defbibenvironment{bibliography}
+        {\list{\printtext[labelnumberwidth]{%
+            \printfield{labelprefix}%
+            \printfield{labelnumber}}}
+        {\setlength{\leftmargin}{\bibhang}%
+            \setlength{\itemindent}{-\leftmargin}%
+            \setlength{\itemsep}{2\baselineskip plus .05\baselineskip minus .05\baselineskip}%
+            \setlength{\parsep}{\bibparsep}}
+        }
+        {\endlist}
+    {\item}
+}
+```
+
+# Table of Contents Setup
+The table of contents, and chapter, section and subsection headers, are formatted using the [titlesec packages](https://github.com/cacsphysics/BMC_Template_Info_Files/blob/main/titlesec.pdf), there are three. 
+> I wish the author of the titlesec manual used the hyperref package.
+
+
