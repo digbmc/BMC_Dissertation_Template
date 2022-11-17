@@ -44,6 +44,8 @@ The bibliography is required to have each bibitem with a hanging indent and sing
 
 
 # Bibliography Setup
+[issue #7](https://github.com/cacsphysics/BMC_Dissertation_Template/issues/7) describes an alternative way to properly format the bibliography. 
+
 The bibliography setup currently used within the template was constructed with various stackexchange information. The solutions within [the link](https://tex.stackexchange.com/questions/400644/no-hanging-indent-with-biblatex-in-bibliography) are very helpful. In addition, the [biblatex package](https://ctan.org/pkg/biblatex) was curcial in understanding the **\defbibenvironment{}** biblatex command.
 
 The Bibliography code block:
