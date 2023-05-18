@@ -1,6 +1,15 @@
 %% Created by Carlos Cartagena-Sanchez
 \documentclass[12pt]{report}
-%
+%\usepackage{tocloft}
+%\renewcommand{\cftsecfont}{\Large\itshape}
+%\renewcommand{\cftsecpagefont}{\Large\itshape}
+%\setlength{\cftfignumwidth}{2.55em}
+%\setlength{\cftfignumwidth}{5.00em}
+%\setlength{\cftbeforechapskip}{0.4cm}
+%\setlength{\cftbeforesecskip}{0.30cm}
+%\setlength{\cftbeforesubsecskip}{0.30cm}
+%\setlength{\cftbeforefigskip}{0.4cm}
+%\setlength{\cftbeforetabskip}{0.4cm} 
 \usepackage[double,bibconfig]{bmctemplate}
 \addbibresource{template_file.bib}
 \begin{document}
@@ -22,9 +31,12 @@
 \import{./}{dedicationpage.tex}
 \import{./}{acknowledgementpage.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \tableofcontents
 \newpage
+\begin{singlespacing}
 \listoffigures
+\end{singlespacing}
 \addcontentsline{toc}{chapter}{\listfigurename}
 \newpage
 \listoftables
@@ -62,7 +74,19 @@ Margins should be $1in$ on all sides. The left-hand margin can be $1.5in$ for bi
 The body text should be double-spaced, with the exception of long quotations (which should be offset and single-spaced), list of figures or appendices, text of footnotes or endnotes, and entries in your bibliography.
 \section{Bibliographies}\label{sec:biblio}
 Your bibliography (or References, or Works Cited), which should include all sources used in your dissertation, can follow the preferred citation style of your discipline. You can divide the bibliography among primary and secondary sources, and can include a list of abbreviations. Entries should be single spaced, with a double space between entries, and a hanging indent.~\parencite{schaffner_temporal_2014, batchelor_1953}
-
+\subsection{Hello Check}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{example-image-a}
+\caption{An example graph. The \LaTeX~ example figure is a placeholder. I am testing the spacing of the list of figures captions.}
+\label{fig:x cubed  Agraph}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{example-image-b}
+\caption{An example graph, this is one is B. The \LaTeX~ example figure is a placeholder. I am testing the spacing of the list of figures captions.}
+\label{fig:x cubed B graph}
+\end{figure}
 The \verb|biblatex| package is called within the \verb|bmctemplate.sty| file. This means you can use the biblatex commands to setup your bibliography. 
 To add a bibliographic resource file use the \verb|\addbibresource{biblio_file.bib}| command. And to print the bibliography and include it within the table of contents use \verb|\printbibliography[heading=bibintoc, title={Bibliography}]|.
 
@@ -73,6 +97,9 @@ Your dissertation will be made openly available through the \href{https://reposi
 For both the BMC repository and Proquest, you can publish your dissertation immediately, or withhold dissemination for one or two years. If you do not place an embargo on the dissertation, it will be made openly available immediately and will be published to the Proquest Digital Dissertations database immediately. If you do place an embargo period and will automatically be made available openly at the end of the embargo. 
 
 \appendix
+\addtocontents{toc}{%
+  \protect\renewcommand*{\protect\cftchappresnum}{Appendix }%
+}
 \chapter{Appendix Name}
 Optional section. If you have several appendices, you can list them in a "List of Appendices" in the front matter with the optional lists of figures, illustrations, tables, etc.
 
