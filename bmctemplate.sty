@@ -59,12 +59,14 @@
 \RequirePackage{indentfirst}  % indents the first paragraph
 \RequirePackage{caption}
 \RequirePackage{subcaption}
-
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
 % I will need to add tocloft
 \RequirePackage[titles]{tocloft}
 \RequirePackage[titletoc]{appendix}
-%\usepackage[titles]{tocloft}
-%\usepackage[titletoc]{appendix}
+
 %%%%%% Package Options
 \DeclareOption{double}{\linespread{2.0}}
 
@@ -93,51 +95,45 @@
         {\endlist}
     {\item}
 \fi
-%%%%%% Conditional Statements
+%%%%%% Conditional Statements %%%%%%
 
 
+%%%%%% Headings %%%%%%
+\newcommand\noentrynumber[1]{}
+\titleformat{\chapter}[block]
+{\centering\normalfont\normalsize\bfseries}{\chaptertitlename\  \thechapter:}{1em}{}
 
-%%%%%% TOC
-%\RequirePackage{tocstyle}
-%\usetocstyle{standard} % Use the standard style
-%\settocfeature{raggedhook}{\raggedright} % Ragged right
-%\contentsmargin{2.55em}
-%\dottedcontents{section}[3.8em]{\filright}{2.3em}{1pc}
-%\dottedcontents{subsection}[6.1em]{\filcenter}{2.3em}{1pc}
-%\titlecontents{chapter}[3.8em]{}{\contentslabel{2.3em}}{\hspace{-2.3em}}{\titlerule*[1pc]{}\textbf{\contentspage}}
-%\contentsmargin[2pt]
-%\titlecontents{chapter}[3pc]{\addvspace{1.5pc}\filcenter}{CHAPTER \thecontentslabel\\*[.2pc]\huge}{\huge}{}[\addvspace{.5pc}]
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
 
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
 
-%%%%%% Headings
-%\newcommand\noentrynumber[1]{}
-%\titleformat{\chapter}[block]
-%{\centering\normalfont\normalsize\bfseries}{\chaptertitlename\  \thechapter:}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
+%%%%%%%%%
+\renewcommand{\cftchappresnum}{\chaptertitlename\ } 
+\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapleader}{ \titlerule*[0.25pc]{.}}
+\newlength{\mylen} % a "scratch" length, choose any name you like
+\settowidth{\mylen}{\cftchappresnum} % extra space
+\addtolength{\cftchapnumwidth}{1.1\mylen} % add the extra space
 
-%\titleformat{\section}
-%  {\normalfont\normalsize\bfseries}{\thesection.}{1em}{}
-
-%\titleformat{\subsection}
-%  {\normalfont\normalsize\bfseries}{\thesubsection.}{1em}{}
-
-%\titleformat{\subsubsection}
-%  {\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
-
-%\renewcommand{\cftchappresnum}{Chapter } 
-%\renewcommand{\cftchapaftersnum}{:}
-%\renewcommand{\cftchapleader}{ \titlerule*[0.25pc]{.}}
-%\newlength{\mylen} % a "scratch" length, choose any name you like
-%\settowidth{\mylen}{\cftchappresnum} % extra space
-%\addtolength{\cftchapnumwidth}{1.1\mylen} % add the extra space
-
-%\renewcommand{\cftchappagefont}{\normalfont}
-%\renewcommand{\cftsecleader}{ \titlerule*[0.25pc]{.}}
-%\renewcommand{\cftsubsecleader}{ \titlerule*[0.25pc]{.}}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftsecleader}{ \titlerule*[0.25pc]{.}}
+\renewcommand{\cftsubsecleader}{ \titlerule*[0.25pc]{.}}
 %\renewcommand{\cftdot}{\titlerule*[0.25pc]{.}}
 %\renewcommand{\cfttoctitlefont}{\center} 
-%\renewcommand{\cftchapfont}{}
-%\renewcommand{\cftsecfont}{}
-%\renewcommand{\cftsubsecfont}{}
+\renewcommand{\cftchapfont}{}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsubsecfont}{}
+
+%%%%%% List of Figures Format %%%%%%
+\setlength{\cftbeforechapskip}{0.25pc}
+\setlength{\cftbeforesecskip}{0.25pc}
+\setlength{\cftbeforesubsecskip}{0.25pc}
+\setlength{\cftbeforefigskip}{0.4cm}
+\setlength{\cftbeforetabskip}{0.4cm} 
 
 
 %%%%%% Margins %%%%%%
