@@ -51,6 +51,7 @@
 \RequirePackage{setspace}
 \RequirePackage{titletoc}
 \RequirePackage{xparse}
+\RequirePackage{graphicx}
 \RequirePackage[document]{ragged2e}
 \RequirePackage[a4paper, left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
 
@@ -58,6 +59,14 @@
 \RequirePackage{indentfirst}  % indents the first paragraph
 \RequirePackage{caption}
 \RequirePackage{subcaption}
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+% I will need to add tocloft
+\RequirePackage[titles]{tocloft}
+\RequirePackage[titletoc]{appendix}
+
 %%%%%% Package Options
 \DeclareOption{double}{\linespread{2.0}}
 
@@ -86,14 +95,10 @@
         {\endlist}
     {\item}
 \fi
-%%%%%% Conditional Statements
+%%%%%% Conditional Statements %%%%%%
 
 
-
-
-
-
-%%%%%% Headings
+%%%%%% Headings %%%%%%
 \newcommand\noentrynumber[1]{}
 \titleformat{\chapter}[block]
 {\centering\normalfont\normalsize\bfseries}{\chaptertitlename\  \thechapter:}{1em}{}
@@ -106,6 +111,31 @@
 
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsection.}{1em}{}
+%%%%%%%%%
+\renewcommand{\cftchappresnum}{\chaptertitlename\ } 
+\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapleader}{ \titlerule*[0.25pc]{.}}
+\newlength{\mylen} % a "scratch" length, choose any name you like
+\settowidth{\mylen}{\cftchappresnum} % extra space
+\addtolength{\cftchapnumwidth}{1.1\mylen} % add the extra space
+
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftsecleader}{ \titlerule*[0.25pc]{.}}
+\renewcommand{\cftsubsecleader}{ \titlerule*[0.25pc]{.}}
+%\renewcommand{\cftdot}{\titlerule*[0.25pc]{.}}
+%\renewcommand{\cfttoctitlefont}{\center} 
+\renewcommand{\cftchapfont}{}
+\renewcommand{\cftsecfont}{}
+\renewcommand{\cftsubsecfont}{}
+
+%%%%%% List of Figures Format %%%%%%
+\setlength{\cftbeforechapskip}{0.25pc}
+\setlength{\cftbeforesecskip}{0.25pc}
+\setlength{\cftbeforesubsecskip}{0.25pc}
+\setlength{\cftbeforefigskip}{0.4cm}
+\setlength{\cftbeforetabskip}{0.4cm} 
+
+
 %%%%%% Margins %%%%%%
 
 %%%%%% Changing the name of the contents page
@@ -130,6 +160,15 @@
 {\titlerule*[0.25pc]{.}\thecontentspage} 
 [\addvspace{0.25pc}]
 
+\titlecontents{subsection}
+[4.0em]
+{\addvspace{0.25pc}%
+}
+{\thecontentslabel~%
+}
+{}
+{\titlerule*[0.25pc]{.}\thecontentspage} 
+[\addvspace{0.25pc}]
 
 %%%%%% Command for Appendix List %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\listappendixname{List of Appendices}
